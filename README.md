@@ -6,3 +6,7 @@ Instruções de uso :
  - npm start
 
  ![Image containing instructions](./img/instruction-1.png)
+
+
+Teste utilizando Postman.
+ ![Image containing test](./img/example.png)
