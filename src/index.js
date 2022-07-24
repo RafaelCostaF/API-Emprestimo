@@ -40,10 +40,10 @@ function filtrarProdutosEmprestimo(name,cpf,age,uf,rendaMensal){
     
     if(rendaMensal >= 5000){
         list_produtos.push(emprestimos.pessoal)
-        list_produtos.push(emprestimos.consignado)
         if(age < 30){
             list_produtos.push(emprestimos.garantia);
         }
+        list_produtos.push(emprestimos.consignado)
         return list_produtos;
     }
 
