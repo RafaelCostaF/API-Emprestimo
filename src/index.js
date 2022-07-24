@@ -17,7 +17,6 @@ const JSON_EXAMPLE = {
     }
 }
 
-// app.use(express.json());
 app.use(bodyParser.json());
 
 let emprestimos = {
@@ -70,12 +69,7 @@ function produtos_emprestimo(name,cpf,age,uf,rendaMensal){
 }
 
 
-var reqq = 0;
-
 app.post("/api", (req,res) => {
-    reqq += 1;
-    console.log(`New req. Number : ${reqq}`);
-    console.log(req.body)
     try{
         var clientName = req.body.cliente.name;
         var clientCpf = req.body.cliente.cpf;
