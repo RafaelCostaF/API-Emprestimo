@@ -1,6 +1,11 @@
 const express = require('express');
-const app = express();
 const bodyParser = require('body-parser');
+const cors = require('cors');
+
+const app = express();
+app.use(cors())
+
+
 const PORT = 3000;
 const JSON_EXAMPLE = {
     "client":{
@@ -65,9 +70,12 @@ function produtos_emprestimo(name,cpf,age,uf,rendaMensal){
 }
 
 
+var reqq = 0;
 
-app.get("/api", (req,res) => {
-    
+app.post("/api", (req,res) => {
+    reqq += 1;
+    console.log(`New req. Number : ${reqq}`);
+    console.log(req.body)
     try{
         var clientName = req.body.cliente.name;
         var clientCpf = req.body.cliente.cpf;
