@@ -35,7 +35,7 @@ let emprestimos = {
 
 }
 
-function produtos_emprestimo(name,cpf,age,uf,rendaMensal){
+function filtrarProdutosEmprestimo(name,cpf,age,uf,rendaMensal){
     let list_produtos = []
     
     if(rendaMensal >= 5000){
@@ -95,7 +95,7 @@ app.post("/api", (req,res) => {
                 "renda_mensal": clientRendaMensal
 
             },
-            "produtos_emprestimo":produtos_emprestimo(clientName,clientCpf,clientAge,clientUf,clientRendaMensal)
+            "produtos_emprestimo":filtrarProdutosEmprestimo(clientName,clientCpf,clientAge,clientUf,clientRendaMensal)
         }
         res.json(response)
 
